@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "微软雅黑", sans-serif;
+}
+body {
+    background: #fdf6f0;
+    padding: 20px 10px;
+}
+.box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.hide {
+    display: none;
+}
+h1 {
+    text-align: center;
+    color: #e27c7c;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.part {
+    margin-bottom: 25px;
+}
+.part h2 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    border-left: 4px solid #f6c0c0;
+}
+.q {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+.q p {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.q label {
+    display: block;
+    margin: 6px 0;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+.submitBtn, .resetBtn {
+    width: 100%;
+    background: #e27c7c;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.submitBtn:hover, .resetBtn:hover {
+    background: #d16666;
+}
+.resultCard {
+    text-align: center;
+}
+.percentTxt {
+    color: #999;
+    margin: 8px 0 20px;
+    font-size: 15px;
+}
+.bars {
+    margin: 20px 0;
+}
+.barItem {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.barItem span:first-child {
+    width: 40px;
+    text-align: left;
+    color: #666;
+}
+.barBg {
+    flex: 1;
+    height: 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.bar {
+    height: 100%;
+    background: #f6c0c0;
+    border-radius: 6px;
+    transition: width 0.6s ease;
+}
+.barItem span:last-child {
+    width: 40px;
+    text-align: right;
+    color: #e27c7c;
+    font-weight: bold;
+}
+.descBox, .suggestBox {
+    background: #fef5f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: left;
+}
+.descBox h3, .suggestBox h3 {
+    color: #e27c7c;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.descBox p, .suggestBox p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 14px;
+}
