@@ -1,31 +1,101 @@
 const catList = [
-  {c:(e,s,t,j)=>e>=70&&s>=70&&t>=70&&j>=70,n:"小狗猫",d:"外向粘人+念旧务实+感性贴心+强迫症，像小狗一样黏着你，准时叫你起床～",g:"固定作息、多陪伴、不要频繁换环境"},
-  {c:(e,s,t,j)=>e>=70&&s>=70&&t>=70&&j>=60&&j<70,n:"小鹿猫",d:"温顺粘人+守旧规律+感性温和，不乱闹、不挑事，超省心～",g:"固定饮食、温柔互动、少换玩具"},
-  {c:(e,s,t,j)=>e>=40&&e<60&&s>=40&&s<60&&t>=40&&t<60&&j>=40&&j<60,n:"变色龙猫",d:"四维均衡，时而粘人时而独立，超级百搭～",g:"随心喂养、不约束、多观察情绪"}
+  {type:"ESTJ",n:"小狗猫",d:"外向粘人+务实+理性+规律，像小狗一样黏人又守时",g:"固定作息、多陪伴"},
+  {type:"ESFJ",n:"小鹿猫",d:"温顺粘人+感性+稳定，超级治愈",g:"多互动、少冷落"},
+  {type:"XXXX",n:"变色龙猫",d:"性格多变，适应力强",g:"自由养"}
 ];
 
-if (location.pathname.includes('index.html')) {
+// 👉 计算函数
+function calc() {
+  const score = (p, n) =>
+    Array.from({length:n}, (_,i) =>
+      +document.querySelector(`input[name="${p}${i+1}"]:checked`)?.value || 3
+    ).reduce((a,b)=>a+b,0);
+
+  const E=score('E',8), S=score('S',10), T=score('T',10), J=score('J',8);
+
+  const eP=Math.round(E/40*100);
+  const sP=Math.round(S/50*100);
+  const tP=Math.round(T/50*100);
+  const jP=Math.round(J/40*100);
+
+  // 👉 MBTI判定
+  const type =
+    (eP>=50?'E':'I') +
+    (sP>=50?'S':'N') +
+    (tP>=50?'T':'F') +
+    (jP>=50?'J':'P');
+
+  const cat = catList.find(x=>x.type===type) || catList.at(-1);
+
+  return {eP,sP,tP,jP,type,cat};
+}
+
+// 👉 首页逻辑
+if (location.pathname.includes('index')) {
   document.getElementById('catForm').addEventListener('submit', e => {
     e.preventDefault();
-    const score = (p, n) => Array.from({length:n}, (_,i) => +document.querySelector(`input[name="${p}${i+1}"]:checked`)?.value||3).reduce((a,b)=>a+b,0);
-    const E=score('E',8),S=score('S',10),T=score('T',10),J=score('J',8);
-    const eP=Math.round(E/40*100),sP=Math.round(S/50*100),tP=Math.round(T/50*100),jP=Math.round(J/40*100);
-    const cat = catList.find(x=>x.c(eP,sP,tP,jP)) || catList.at(-1);
-    localStorage.setItem('maoBTI', JSON.stringify({cat,eP,sP,tP,jP}));
+
+    const result = calc();
+
+    // 👉 存本地
+    localStorage.setItem('maoBTI', JSON.stringify(result));
+
+    // 👉 分享链接（关键！）
+    const url = `result.html?e=${result.eP}&s=${result.sP}&t=${result.tP}&j=${result.jP}&type=${result.type}`;
+
+    window.location.href = url;
   });
 }
 
-if (location.pathname.includes('result.html')) {
+// 👉 结果页逻辑
+if (location.pathname.includes('result')) {
   window.onload = () => {
-    const d = JSON.parse(localStorage.getItem('maoBTI'));
-    if(!d){location.href='index.html';return}
-    document.getElementById('catName').textContent=d.cat.n;
-    document.getElementById('catPct').textContent=`E${d.eP}% • S${d.sP}% • T${d.tP}% • J${d.jP}%`;
-    document.getElementById('bE').style.width=d.eP+'%';document.getElementById('tE').textContent=d.eP+'%';
-    document.getElementById('bS').style.width=d.sP+'%';document.getElementById('tS').textContent=d.sP+'%';
-    document.getElementById('bT').style.width=d.tP+'%';document.getElementById('tT').textContent=d.tP+'%';
-    document.getElementById('bJ').style.width=d.jP+'%';document.getElementById('tJ').textContent=d.jP+'%';
-    document.getElementById('catDesc').textContent=d.cat.d;
-    document.getElementById('catSuggest').textContent=d.cat.g;
+
+    // 👉 优先读URL（分享用）
+    const params = new URLSearchParams(location.search);
+
+    let data;
+
+    if (params.get('e')) {
+      data = {
+        eP:+params.get('e'),
+        sP:+params.get('s'),
+        tP:+params.get('t'),
+        jP:+params.get('j'),
+        type:params.get('type'),
+        cat:catList.find(x=>x.type===params.get('type')) || catList.at(-1)
+      };
+    } else {
+      data = JSON.parse(localStorage.getItem('maoBTI'));
+    }
+
+    if (!data) {
+      location.href = 'index.html';
+      return;
+    }
+
+    // 👉 渲染
+    document.getElementById('catName').textContent = `${data.cat.n} (${data.type})`;
+    document.getElementById('catPct').textContent =
+      `E${data.eP}% • S${data.sP}% • T${data.tP}% • J${data.jP}%`;
+
+    ['E','S','T','J'].forEach(k=>{
+      document.getElementById('b'+k).style.width = data[k.toLowerCase()+'P']+'%';
+      document.getElementById('t'+k).textContent = data[k.toLowerCase()+'P']+'%';
+    });
+
+    document.getElementById('catDesc').textContent = data.cat.d;
+    document.getElementById('catSuggest').textContent = data.cat.g;
+
+    // 👉 自动生成分享链接
+    const share = location.href;
+    const btn = document.createElement('button');
+    btn.textContent = "复制分享链接";
+    btn.className = "submitBtn";
+    btn.onclick = () => {
+      navigator.clipboard.writeText(share);
+      btn.textContent = "已复制！";
+    };
+    document.querySelector('.resultCard').appendChild(btn);
   };
 }
