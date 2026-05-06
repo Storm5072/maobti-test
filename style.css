@@ -1,25 +1,233 @@
-*{box-sizing:border-box;margin:0;padding:0;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
-body{background:#fdf6f0;padding:15px;line-height:1.6}
-.container{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.07)}
-.page-box{width:100%}
-.show{display:block}
-.hide{display:none}
-h1{text-align:center;color:#e27c7c;margin-bottom:20px;font-size:22px}
-.group{margin-bottom:24px}
-.group h2{font-size:16px;color:#555;margin-bottom:12px;padding-left:8px;border-left:4px solid #f6c0c0}
-.item{margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed #eee}
-.item p{font-size:15px;color:#222;margin-bottom:8px}
-.item label{display:block;margin:5px 0;font-size:14px;color:#444;cursor:pointer}
-.btn-submit,.btn-reset{width:100%;background:#e27c7c;color:#fff;border:none;border-radius:8px;padding:14px;font-size:16px;font-weight:bold;margin-top:10px;cursor:pointer}
-.btn-submit:active,.btn-reset:active{background:#d16666}
-.result-card{text-align:center}
-#catPct{color:#888;margin:8px 0 16px}
-.bar-box{margin:20px 0}
-.bar-line{display:flex;align-items:center;margin:10px 0;font-size:14px}
-.bar-line span:first-child{width:40px;color:#555}
-.bar-bg{flex:1;height:12px;background:#f0f0f0;border-radius:6px;margin:0 10px;overflow:hidden}
-.bar{height:100%;background:#f6c0c0;border-radius:6px;width:0;transition:width .6s}
-.bar-line span:last-child{width:40px;text-align:right;color:#e27c7c;font-weight:bold}
-.text-box{background:#fef5f0;border-radius:8px;padding:15px;margin:15px 0;text-align:left}
-.text-box h3{color:#e27c7c;margin-bottom:8px;font-size:15px}
-.text-box p{color:#444;font-size:14px}
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC", "微软雅黑", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fdf6f0 0%, #faf0e6 100%);
+  min-height: 100vh;
+  padding: 20px 15px;
+}
+
+/* 容器样式 */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 问卷页卡片 */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card h1 {
+  text-align: center;
+  color: #e27c7c;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #999;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* 问卷章节 */
+.section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.section h2 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 4px solid #f6c0c0;
+}
+
+/* 题目样式 */
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.question label {
+  display: block;
+  margin: 8px 0;
+  color: #666;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.question label:hover {
+  color: #e27c7c;
+}
+
+.question input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #e27c7c;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #e27c7c 0%, #d16666 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(226, 124, 124, 0.3);
+  transition: transform 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 结果页卡片 */
+.result-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.cat-avatar {
+  font-size: 60px;
+  margin: 15px 0;
+}
+
+.result-card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.percent-tag {
+  color: #e27c7c;
+  font-size: 16px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* 进度条样式 */
+.progress-group {
+  margin: 30px 0;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.progress-item span:first-child {
+  width: 100px;
+  color: #666;
+  text-align: left;
+}
+
+.progress-bg {
+  flex: 1;
+  height: 14px;
+  background: #f5f5f5;
+  border-radius: 7px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f6c0c0 0%, #e27c7c 100%);
+  border-radius: 7px;
+  transition: width 0.8s ease;
+}
+
+.progress-item span:last-child {
+  width: 40px;
+  color: #e27c7c;
+  font-weight: bold;
+}
+
+/* 描述与建议框 */
+.desc-box, .suggest-box {
+  background: #fef5f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.desc-box h3, .suggest-box h3 {
+  color: #e27c7c;
+  font-size: 17px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.desc-box p, .suggest-box p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* 结果页按钮组 */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.reset-btn, .share-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.reset-btn {
+  background: #f5f5f5;
+  color: #666;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-btn {
+  background: linear-gradient(135deg, #e27c7c 0%, #d16666 100%);
+  color: #fff;
+  border: none;
+}
+
+.reset-btn:hover, .share-btn:hover {
+  transform: translateY(-2px);
+}
