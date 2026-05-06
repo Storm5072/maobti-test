@@ -37,33 +37,41 @@ const catList = [
     {c:(e,s,t,j)=>e>=40&&e<60&&s>=40&&s<60&&t>=40&&t<60&&j>=40&&j<60,n:"变色龙猫",d:"四维均衡，时而粘人时而独立，超级百搭～",g:"随心喂养、不约束、多观察情绪"}
 ];
 
+// 提交表单（跳转必生效）
 document.getElementById("catForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    let E = [...Array(8)].map((_,i)=>+getVal("E"+(i+1))).reduce((a,b)=>a+b,0);
-    let S = [...Array(10)].map((_,i)=>+getVal("S"+(i+1))).reduce((a,b)=>a+b,0);
-    let T = [...Array(10)].map((_,i)=>+getVal("T"+(i+1))).reduce((a,b)=>a+b,0);
-    let J = [...Array(8)].map((_,i)=>+getVal("J"+(i+1))).reduce((a,b)=>a+b,0);
-    let e = Math.round(E/40*100), s = Math.round(S/50*100), t = Math.round(T/50*100), j = Math.round(J/40*100);
-    let cat = catList.find(item=>item.c(e,s,t,j)) || catList[35];
-    document.getElementById("catName").innerText = cat.n;
-    document.getElementById("catPercent").innerText = `E${e}% • S${s}% • T${t}% • J${j}`;
-    document.getElementById("barE").style.width = e+"%"; document.getElementById("txtE").innerText = e+"%";
-    document.getElementById("barS").style.width = s+"%"; document.getElementById("txtS").innerText = s+"%";
-    document.getElementById("barT").style.width = t+"%"; document.getElementById("txtT").innerText = t+"%";
-    document.getElementById("barJ").style.width = j+"%"; document.getElementById("txtJ").innerText = j+"%";
-    document.getElementById("catDesc").innerText = cat.d;
-    document.getElementById("catSuggest").innerText = cat.g;
-    document.getElementById("questionBox").classList.add("hide");
-    document.getElementById("resultBox").classList.remove("hide");
+    e.preventDefault(); // 强制阻止刷新
+    // 算分
+    const E = Array.from({length:8},(_,i)=>+getVal("E"+(i+1))).reduce((a,b)=>a+b,0);
+    const S = Array.from({length:10},(_,i)=>+getVal("S"+(i+1))).reduce((a,b)=>a+b,0);
+    const T = Array.from({length:10},(_,i)=>+getVal("T"+(i+1))).reduce((a,b)=>a+b,0);
+    const J = Array.from({length:8},(_,i)=>+getVal("J"+(i+1))).reduce((a,b)=>a+b,0);
+    // 百分比
+    const e = Math.round(E/40*100), s = Math.round(S/50*100), t = Math.round(T/50*100), j = Math.round(J/40*100);
+    // 匹配猫格
+    const cat = catList.find(item=>item.c(e,s,t,j))||catList[35];
+    // 渲染结果
+    document.getElementById("catName").textContent = cat.n;
+    document.getElementById("catPercent").textContent = `E${e}% • S${s}% • T${t}% • J${j}`;
+    document.getElementById("barE").style.width = e+"%"; document.getElementById("txtE").textContent = e+"%";
+    document.getElementById("barS").style.width = s+"%"; document.getElementById("txtS").textContent = s+"%";
+    document.getElementById("barT").style.width = t+"%"; document.getElementById("txtT").textContent = t+"%";
+    document.getElementById("barJ").style.width = j+"%"; document.getElementById("txtJ").textContent = j+"%";
+    document.getElementById("catDesc").textContent = cat.d;
+    document.getElementById("catSuggest").textContent = cat.g;
+    // 切换页面（核心修复）
+    document.getElementById("questionPage").classList.add("hide");
+    document.getElementById("resultPage").classList.remove("hide");
 });
 
+// 获取单选值
 function getVal(name){
-    let d = document.querySelector(`input[name="${name}"]:checked`);
+    const d = document.querySelector(`input[name="${name}"]:checked`);
     return d ? d.value : 3;
 }
 
+// 重新测试
 function resetTest(){
-    document.getElementById("resultBox").classList.add("hide");
-    document.getElementById("questionBox").classList.remove("hide");
+    document.getElementById("resultPage").classList.add("hide");
+    document.getElementById("questionPage").classList.remove("hide");
     document.getElementById("catForm").reset();
 }
