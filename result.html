@@ -8,45 +8,31 @@
 </head>
 <body>
 <div class="box">
-<div class="resultCard">
-<h1>🐱 你的猫格报告</h1>
-<h2 id="catName">-</h2>
-<p class="percentTxt" id="catPct">E0% • S0% • T0% • J0%</p>
+  <div class="resultCard">
+    <h1>🐱 你的猫格报告</h1>
 
-<div class="bars">
-<div class="barItem">
-<span>E/I</span>
-<div class="barBg"><div class="bar" id="bE"></div></div>
-<span id="tE">0%</span>
-</div>
-<div class="barItem">
-<span>S/N</span>
-<div class="barBg"><div class="bar" id="bS"></div></div>
-<span id="tS">0%</span>
-</div>
-<div class="barItem">
-<span>T/F</span>
-<div class="barBg"><div class="bar" id="bT"></div></div>
-<span id="tT">0%</span>
-</div>
-<div class="barItem">
-<span>J/P</span>
-<div class="barBg"><div class="bar" id="bJ"></div></div>
-<span id="tJ">0%</span>
-</div>
-</div>
+    <!-- 导航（按你查到的标准格式） -->
+    <nav>
+      <a href="index.html">重新测试</a> |
+      <a href="result.html">查看报告</a>
+    </nav>
 
-<div class="descBox">
-<h3>猫格描述</h3>
-<p id="catDesc">-</p>
-</div>
-<div class="suggestBox">
-<h3>饲养建议</h3>
-<p id="catSuggest">-</p>
-</div>
+    <h2 id="catName">-</h2>
+    <p class="percentTxt" id="catPct">E0% • S0% • T0% • J0%</p>
 
-<button class="resetBtn" onclick="location.href='index.html'">重新测试</button>
-</div>
+    <div class="bars">
+      <div class="barItem"><span>E/I</span><div class="barBg"><div class="bar" id="bE"></div></div><span id="tE">0%</span></div>
+      <div class="barItem"><span>S/N</span><div class="barBg"><div class="bar" id="bS"></div></div><span id="tS">0%</span></div>
+      <div class="barItem"><span>T/F</span><div class="barBg"><div class="bar" id="bT"></div></div><span id="tT">0%</span></div>
+      <div class="barItem"><span>J/P</span><div class="barBg"><div class="bar" id="bJ"></div></div><span id="tJ">0%</span></div>
+    </div>
+
+    <div class="descBox"><h3>猫格描述</h3><p id="catDesc">-</p></div>
+    <div class="suggestBox"><h3>饲养建议</h3><p id="catSuggest">-</p></div>
+
+    <!-- 返回按钮（链接格式） -->
+    <a href="index.html" class="resetBtn">重新测试</a>
+  </div>
 </div>
 <script src="script.js"></script>
 </body>

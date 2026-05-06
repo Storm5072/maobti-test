@@ -1,6 +1,9 @@
 * {margin:0;padding:0;box-sizing:border-box;font-family:"PingFang SC","微软雅黑",sans-serif}
 body {background:#fdf6f0;padding:20px 10px}
 .box {max-width:700px;margin:0 auto;background:white;padding:25px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+nav {text-align:center;margin-bottom:20px;font-size:14px}
+nav a {margin:0 10px;color:#e27c7c;text-decoration:none}
+nav a:hover {text-decoration:underline}
 .hide {display:none}
 h1 {text-align:center;color:#e27c7c;margin-bottom:20px;font-size:24px}
 .part {margin-bottom:25px}
@@ -8,7 +11,7 @@ h1 {text-align:center;color:#e27c7c;margin-bottom:20px;font-size:24px}
 .q {margin-bottom:16px;padding-bottom:12px;border-bottom:1px dashed #eee}
 .q p {color:#333;font-weight:500;margin-bottom:8px;font-size:15px}
 .q label {display:block;margin:6px 0;color:#555;font-size:14px;cursor:pointer}
-.submitBtn,.resetBtn {width:100%;background:#e27c7c;color:white;border:none;padding:14px;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:10px}
+.submitBtn,.resetBtn {display:block;width:100%;text-align:center;background:#e27c7c;color:white;border:none;padding:14px;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:10px;text-decoration:none}
 .submitBtn:hover,.resetBtn:hover {background:#d16666}
 .resultCard {text-align:center}
 .percentTxt {color:#999;margin:8px 0 20px;font-size:15px}
