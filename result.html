@@ -3,30 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>你的猫格报告</title>
+<title>猫格报告</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="box">
-  <div class="resultCard">
-    <h1>🐱 你的猫格报告</h1>
-    <h2 id="catName">-</h2>
-    <p class="percentTxt" id="catPct">E0% • S0% • T0% • J0%</p>
 
-    <div class="bars">
-      <div class="barItem"><span>E/I</span><div class="barBg"><div class="bar" id="bE"></div></div><span id="tE">0%</span></div>
-      <div class="barItem"><span>S/N</span><div class="barBg"><div class="bar" id="bS"></div></div><span id="tS">0%</span></div>
-      <div class="barItem"><span>T/F</span><div class="barBg"><div class="bar" id="bT"></div></div><span id="tT">0%</span></div>
-      <div class="barItem"><span>J/P</span><div class="barBg"><div class="bar" id="bJ"></div></div><span id="tJ">0%</span></div>
-    </div>
+<div class="resultCard">
 
-    <div class="descBox"><h3>猫格描述</h3><p id="catDesc">-</p></div>
-    <div class="suggestBox"><h3>饲养建议</h3><p id="catSuggest">-</p></div>
+<h1>🐱 你的猫格报告</h1>
+<h2 id="catName"></h2>
+<p id="beat"></p>
 
-    <!-- 👇 返回首页按钮 -->
-    <a href="index.html" class="resetBtn">重新测试</a>
-  </div>
+<div class="bars">
+<div class="barItem"><span>E</span><div class="barBg"><div id="bE" class="bar"></div></div><span id="tE"></span></div>
+<div class="barItem"><span>S</span><div class="barBg"><div id="bS" class="bar"></div></div><span id="tS"></span></div>
+<div class="barItem"><span>T</span><div class="barBg"><div id="bT" class="bar"></div></div><span id="tT"></span></div>
+<div class="barItem"><span>J</span><div class="barBg"><div id="bJ" class="bar"></div></div><span id="tJ"></span></div>
 </div>
+
+<div class="descBox"><h3>猫格解析</h3><p id="catDesc"></p></div>
+<div class="suggestBox"><h3>饲养建议</h3><p id="catSuggest"></p></div>
+
+<!-- 分享卡 -->
+<div class="descBox">
+<h3>分享卡</h3>
+<p id="shareText"></p>
+<button class="submitBtn" onclick="copy()">复制文案</button>
+</div>
+
+<!-- 排行榜 -->
+<div class="descBox">
+<h3>当前猫格排行榜</h3>
+<ol id="rankList"></ol>
+</div>
+
+<a href="index.html" class="resetBtn">重新测试</a>
+
+</div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
