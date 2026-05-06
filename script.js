@@ -1,4 +1,3 @@
-// 36种猫格完整数据
 const catList = [
     {c:(e,s,t,j)=>e>=70&&s>=70&&t>=70&&j>=70,n:"小狗猫",d:"外向粘人+念旧务实+感性贴心+强迫症，像小狗一样黏着你，准时叫你起床～",g:"固定作息、多陪伴、不要频繁换环境"},
     {c:(e,s,t,j)=>e>=70&&s>=70&&t>=70&&j>=60&&j<70,n:"小鹿猫",d:"温顺粘人+守旧规律+感性温和，不乱闹、不挑事，超省心～",g:"固定饮食、温柔互动、少换玩具"},
@@ -38,19 +37,14 @@ const catList = [
     {c:(e,s,t,j)=>e>=40&&e<60&&s>=40&&s<60&&t>=40&&t<60&&j>=40&&j<60,n:"变色龙猫",d:"四维均衡，时而粘人时而独立，超级百搭～",g:"随心喂养、不约束、多观察情绪"}
 ];
 
-// 表单提交
 document.getElementById("catForm").addEventListener("submit", function(e){
     e.preventDefault();
-    // 计分
     let E = [...Array(8)].map((_,i)=>+getVal("E"+(i+1))).reduce((a,b)=>a+b,0);
     let S = [...Array(10)].map((_,i)=>+getVal("S"+(i+1))).reduce((a,b)=>a+b,0);
     let T = [...Array(10)].map((_,i)=>+getVal("T"+(i+1))).reduce((a,b)=>a+b,0);
     let J = [...Array(8)].map((_,i)=>+getVal("J"+(i+1))).reduce((a,b)=>a+b,0);
-    // 百分比
     let e = Math.round(E/40*100), s = Math.round(S/50*100), t = Math.round(T/50*100), j = Math.round(J/40*100);
-    // 匹配猫格
     let cat = catList.find(item=>item.c(e,s,t,j)) || catList[35];
-    // 渲染结果
     document.getElementById("catName").innerText = cat.n;
     document.getElementById("catPercent").innerText = `E${e}% • S${s}% • T${t}% • J${j}`;
     document.getElementById("barE").style.width = e+"%"; document.getElementById("txtE").innerText = e+"%";
@@ -59,18 +53,15 @@ document.getElementById("catForm").addEventListener("submit", function(e){
     document.getElementById("barJ").style.width = j+"%"; document.getElementById("txtJ").innerText = j+"%";
     document.getElementById("catDesc").innerText = cat.d;
     document.getElementById("catSuggest").innerText = cat.g;
-    // 切换页面
     document.getElementById("questionBox").classList.add("hide");
     document.getElementById("resultBox").classList.remove("hide");
 });
 
-// 获取单选值
 function getVal(name){
     let d = document.querySelector(`input[name="${name}"]:checked`);
     return d ? d.value : 3;
 }
 
-// 重置
 function resetTest(){
     document.getElementById("resultBox").classList.add("hide");
     document.getElementById("questionBox").classList.remove("hide");

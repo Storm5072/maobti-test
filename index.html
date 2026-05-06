@@ -7,127 +7,120 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 问卷区域 -->
     <div class="box" id="questionBox">
         <h1>🐱 MaoBTI猫格测试</h1>
         <form id="catForm">
-            <!-- E/I 8题 -->
             <div class="part">
                 <h2>一、能量来源（外向E / 内向I）</h2>
                 <div class="q">
                     <p>1. 家里来其他宠物时，它的反应是？</p>
-                    <label><input type="radio" name="E1" value="1" required> 1分 立刻躲起来</label>
-                    <label><input type="radio" name="E1" value="2"> 2分 躲角落偷看</label>
-                    <label><input type="radio" name="E1" value="3"> 3分 保持距离</label>
-                    <label><input type="radio" name="E1" value="4"> 4分 好奇观望</label>
-                    <label><input type="radio" name="E1" value="5"> 5分 主动贴贴</label>
+                    <label><input type="radio" name="E1" value="1" required> 立刻躲起来，全程不露面</label>
+                    <label><input type="radio" name="E1" value="2"> 躲在角落，偶尔偷看</label>
+                    <label><input type="radio" name="E1" value="3"> 保持距离，不主动靠近</label>
+                    <label><input type="radio" name="E1" value="4"> 好奇观望，偶尔试探</label>
+                    <label><input type="radio" name="E1" value="5"> 主动凑上去贴贴互动</label>
                 </div>
                 <div class="q">
-                    <p>2. 你回家时，它的反应是？</p>
-                    <label><input type="radio" name="E2" value="1"> 1分 无视</label>
-                    <label><input type="radio" name="E2" value="2"> 2分 看一眼</label>
-                    <label><input type="radio" name="E2" value="3"> 3分 半小时后靠近</label>
-                    <label><input type="radio" name="E2" value="4"> 4分 主动闻一闻</label>
-                    <label><input type="radio" name="E2" value="5"> 5分 门口迎接</label>
+                    <p>2. 你出差回家时，它的反应是？</p>
+                    <label><input type="radio" name="E2" value="1"> 瞥一眼，继续做自己的事</label>
+                    <label><input type="radio" name="E2" value="2"> 待在原地，不主动靠近</label>
+                    <label><input type="radio" name="E2" value="3"> 过10分钟后靠近闻一闻</label>
+                    <label><input type="radio" name="E2" value="4"> 半小时后找你要零食</label>
+                    <label><input type="radio" name="E2" value="5"> 扑到门口，围着你转</label>
                 </div>
                 <div class="q">
                     <p>3. 你追剧时，它喜欢？</p>
-                    <label><input type="radio" name="E3" value="1"> 1分 待在远处</label>
-                    <label><input type="radio" name="E3" value="2"> 2分 沙发另一端</label>
-                    <label><input type="radio" name="E3" value="3"> 3分 偶尔蹭一下</label>
-                    <label><input type="radio" name="E3" value="4"> 4分 趴在旁边</label>
-                    <label><input type="radio" name="E3" value="5"> 5分 趴在身上</label>
+                    <label><input type="radio" name="E3" value="1"> 待在远处，完全不靠近</label>
+                    <label><input type="radio" name="E3" value="2"> 趴在沙发另一端，不互动</label>
+                    <label><input type="radio" name="E3" value="3"> 偶尔蹭一下，马上走开</label>
+                    <label><input type="radio" name="E3" value="4"> 趴在你旁边，不粘人</label>
+                    <label><input type="radio" name="E3" value="5"> 趴在你胸口/腿上蹭镜头</label>
                 </div>
                 <div class="q">
                     <p>4. 陌生人喂零食，它会？</p>
-                    <label><input type="radio" name="E4" value="1"> 1分 坚决不吃</label>
-                    <label><input type="radio" name="E4" value="2"> 2分 远远观望</label>
-                    <label><input type="radio" name="E4" value="3"> 3分 犹豫后吃</label>
-                    <label><input type="radio" name="E4" value="4"> 4分 谨慎吃</label>
-                    <label><input type="radio" name="E4" value="5"> 5分 主动吃</label>
+                    <label><input type="radio" name="E4" value="1"> 警惕后退，坚决不吃</label>
+                    <label><input type="radio" name="E4" value="2"> 远远观望，不动弹</label>
+                    <label><input type="radio" name="E4" value="3"> 犹豫不前，观察后再决定</label>
+                    <label><input type="radio" name="E4" value="4"> 闻一闻，谨慎吃</label>
+                    <label><input type="radio" name="E4" value="5"> 毫不犹豫凑过去吃，还蹭人</label>
                 </div>
                 <div class="q">
                     <p>5. 你做饭时，它会？</p>
-                    <label><input type="radio" name="E5" value="1"> 1分 不进厨房</label>
-                    <label><input type="radio" name="E5" value="2"> 2分 门口观望</label>
-                    <label><input type="radio" name="E5" value="3"> 3分 偶尔进来</label>
-                    <label><input type="radio" name="E5" value="4"> 4分 远处看着</label>
-                    <label><input type="radio" name="E5" value="5"> 5分 灶台监工</label>
+                    <label><input type="radio" name="E5" value="1"> 不进厨房</label>
+                    <label><input type="radio" name="E5" value="2"> 站在厨房门口，不靠近</label>
+                    <label><input type="radio" name="E5" value="3"> 偶尔进厨房看一眼就走</label>
+                    <label><input type="radio" name="E5" value="4"> 蹲在远处，看着你做饭</label>
+                    <label><input type="radio" name="E5" value="5"> 蹲在灶台旁监工，时不时叫</label>
                 </div>
                 <div class="q">
                     <p>6. 逗猫棒能玩多久？</p>
-                    <label><input type="radio" name="E6" value="1"> 1分 1分钟就腻</label>
-                    <label><input type="radio" name="E6" value="2"> 2分 3-5分钟</label>
-                    <label><input type="radio" name="E6" value="3"> 3分 5-10分钟</label>
-                    <label><input type="radio" name="E6" value="4"> 4分 10-15分钟</label>
-                    <label><input type="radio" name="E6" value="5"> 5分 20分钟以上</label>
+                    <label><input type="radio" name="E6" value="1"> 1分钟就腻，转身走</label>
+                    <label><input type="radio" name="E6" value="2"> 3-5分钟，兴致低落</label>
+                    <label><input type="radio" name="E6" value="3"> 5-10分钟，偶尔回应</label>
+                    <label><input type="radio" name="E6" value="4"> 10-15分钟，比较投入</label>
+                    <label><input type="radio" name="E6" value="5"> 20分钟以上，越玩越兴奋</label>
                 </div>
                 <div class="q">
                     <p>7. 快递敲门，它会？</p>
-                    <label><input type="radio" name="E7" value="1"> 1分 躲进猫窝</label>
-                    <label><input type="radio" name="E7" value="2"> 2分 跑到角落</label>
-                    <label><input type="radio" name="E7" value="3"> 3分 竖起耳朵听</label>
-                    <label><input type="radio" name="E7" value="4"> 4分 走到门边</label>
-                    <label><input type="radio" name="E7" value="5"> 5分 门口叫</label>
+                    <label><input type="radio" name="E7" value="1"> 躲进猫窝，不敢出来</label>
+                    <label><input type="radio" name="E7" value="2"> 跑到角落，瑟瑟发抖</label>
+                    <label><input type="radio" name="E7" value="3"> 竖起耳朵听，不靠近门</label>
+                    <label><input type="radio" name="E7" value="4"> 走到门边，不叫</label>
+                    <label><input type="radio" name="E7" value="5"> 跑到门口叫，想出去看</label>
                 </div>
                 <div class="q">
                     <p>8. 家人吃饭，它会？</p>
-                    <label><input type="radio" name="E8" value="1"> 1分 远处观望</label>
-                    <label><input type="radio" name="E8" value="2"> 2分 待在角落</label>
-                    <label><input type="radio" name="E8" value="3"> 3分 餐桌旁不跳</label>
-                    <label><input type="radio" name="E8" value="4"> 4分 蹲椅子旁</label>
-                    <label><input type="radio" name="E8" value="5"> 5分 跳桌蹭碗</label>
+                    <label><input type="radio" name="E8" value="1"> 远处观望，绝不靠近</label>
+                    <label><input type="radio" name="E8" value="2"> 待在角落，不关注</label>
+                    <label><input type="radio" name="E8" value="3"> 餐桌旁不跳上去</label>
+                    <label><input type="radio" name="E8" value="4"> 蹲椅子旁等掉落食物</label>
+                    <label><input type="radio" name="E8" value="5"> 跳上餐桌，蹭碗要吃的</label>
                 </div>
             </div>
 
-            <!-- S/N 10题 -->
             <div class="part">
                 <h2>二、感知方式（实感S / 直觉N）</h2>
-                <div class="q"><p>9. 换新形状猫粮，它会？</p><label><input type="radio" name="S1" value="1">1分 拒绝吃</label><label><input type="radio" name="S1" value="2">2分 犹豫</label><label><input type="radio" name="S1" value="3">3分 试探</label><label><input type="radio" name="S1" value="4">4分 吃几口</label><label><input type="radio" name="S1" value="5">5分 直接吃</label></div>
-                <div class="q"><p>10. 家里新绿植，它会？</p><label><input type="radio" name="S2" value="1">1分 无视</label><label><input type="radio" name="S2" value="2">2分 看一眼</label><label><input type="radio" name="S2" value="3">3分 路过</label><label><input type="radio" name="S2" value="4">4分 闻一下</label><label><input type="radio" name="S2" value="5">5分 扒叶子</label></div>
-                <div class="q"><p>11. 激光笔，它会？</p><label><input type="radio" name="S3" value="1">1分 不追</label><label><input type="radio" name="S3" value="2">2分 偶尔看</label><label><input type="radio" name="S3" value="3">3分 追1-2次</label><label><input type="radio" name="S3" value="4">4分 追5-10次</label><label><input type="radio" name="S3" value="5">5分 追不停</label></div>
-                <div class="q"><p>12. 叫醒你时间准吗？</p><label><input type="radio" name="S4" value="1">1分 误差<10分钟</label><label><input type="radio" name="S4" value="2">2分 10-20分钟</label><label><input type="radio" name="S4" value="3">3分 20-30分钟</label><label><input type="radio" name="S4" value="4">4分 30-60分钟</label><label><input type="radio" name="S4" value="5">5分 完全不准</label></div>
-                <div class="q"><p>13. 新旧玩具，它选？</p><label><input type="radio" name="S5" value="1">1分 只玩旧的</label><label><input type="radio" name="S5" value="2">2分 偏爱旧的</label><label><input type="radio" name="S5" value="3">3分 都玩</label><label><input type="radio" name="S5" value="4">4分 偏爱新的</label><label><input type="radio" name="S5" value="5">5分 只玩新的</label></div>
-                <div class="q"><p>14. 窗外刮风，它会？</p><label><input type="radio" name="S6" value="1">1分 继续睡</label><label><input type="radio" name="S6" value="2">2分 瞥一眼</label><label><input type="radio" name="S6" value="3">3分 看一眼走开</label><label><input type="radio" name="S6" value="4">4分 看5分钟</label><label><input type="radio" name="S6" value="5">5分 盯半天</label></div>
-                <div class="q"><p>15. 猫砂盆换位置，它会？</p><label><input type="radio" name="S7" value="1">1分 找不到</label><label><input type="radio" name="S7" value="2">2分 四处找</label><label><input type="radio" name="S7" value="3">3分 几分钟找到</label><label><input type="radio" name="S7" value="4">4分 很快找到</label><label><input type="radio" name="S7" value="5">5分 立刻适应</label></div>
-                <div class="q"><p>16. 陌生手机铃声，它会？</p><label><input type="radio" name="S8" value="1">1分 无反应</label><label><input type="radio" name="S8" value="2">2分 看一眼</label><label><input type="radio" name="S8" value="3">3分 竖耳朵</label><label><input type="radio" name="S8" value="4">4分 走到旁</label><label><input type="radio" name="S8" value="5">5分 扒手机</label></div>
-                <div class="q"><p>17. 不同容器喂饭，它会？</p><label><input type="radio" name="S9" value="1">1分 只吃碗里</label><label><input type="radio" name="S9" value="2">2分 吃碗/盘</label><label><input type="radio" name="S9" value="3">3分 都吃一点</label><label><input type="radio" name="S9" value="4">4分 少吃纸杯</label><label><input type="radio" name="S9" value="5">5分 都接受</label></div>
-                <div class="q"><p>18. 沙发挪10cm，它会？</p><label><input type="radio" name="S10" value="1">1分 立刻发现</label><label><input type="radio" name="S10" value="2">2分 很快发现</label><label><input type="radio" name="S10" value="3">3分 过会儿发现</label><label><input type="radio" name="S10" value="4">4分 半天发现</label><label><input type="radio" name="S10" value="5">5分 没发现</label></div>
+                <div class="q"><p>9. 换新形状猫粮，它会？</p><label><input type="radio" name="S1" value="1">拒绝吃</label><label><input type="radio" name="S1" value="2">犹豫很久</label><label><input type="radio" name="S1" value="3">试探吃几口</label><label><input type="radio" name="S1" value="4">吃几口观察</label><label><input type="radio" name="S1" value="5">直接吃</label></div>
+                <div class="q"><p>10. 家里新绿植，它会？</p><label><input type="radio" name="S2" value="1">完全无视</label><label><input type="radio" name="S2" value="2">看一眼走开</label><label><input type="radio" name="S2" value="3">路过不触碰</label><label><input type="radio" name="S2" value="4">闻一下不扒拉</label><label><input type="radio" name="S2" value="5">扒叶子研究</label></div>
+                <div class="q"><p>11. 激光笔，它会？</p><label><input type="radio" name="S3" value="1">不追</label><label><input type="radio" name="S3" value="2">偶尔看</label><label><input type="radio" name="S3" value="3">追1-2次</label><label><input type="radio" name="S3" value="4">追5-10次</label><label><input type="radio" name="S3" value="5">追着不停</label></div>
+                <div class="q"><p>12. 叫醒你时间准吗？</p><label><input type="radio" name="S4" value="1">误差<10分钟</label><label><input type="radio" name="S4" value="2">10-20分钟</label><label><input type="radio" name="S4" value="3">20-30分钟</label><label><input type="radio" name="S4" value="4">30-60分钟</label><label><input type="radio" name="S4" value="5">完全不准</label></div>
+                <div class="q"><p>13. 新旧玩具，它选？</p><label><input type="radio" name="S5" value="1">只玩旧的</label><label><input type="radio" name="S5" value="2">偏爱旧的</label><label><input type="radio" name="S5" value="3">都玩</label><label><input type="radio" name="S5" value="4">偏爱新的</label><label><input type="radio" name="S5" value="5">只玩新的</label></div>
+                <div class="q"><p>14. 窗外刮风，它会？</p><label><input type="radio" name="S6" value="1">继续睡</label><label><input type="radio" name="S6" value="2">瞥一眼</label><label><input type="radio" name="S6" value="3">看一眼走开</label><label><input type="radio" name="S6" value="4">看5分钟</label><label><input type="radio" name="S6" value="5">盯半天</label></div>
+                <div class="q"><p>15. 猫砂盆换位置，它会？</p><label><input type="radio" name="S7" value="1">找不到</label><label><input type="radio" name="S7" value="2">四处找</label><label><input type="radio" name="S7" value="3">几分钟找到</label><label><input type="radio" name="S7" value="4">很快找到</label><label><input type="radio" name="S7" value="5">立刻适应</label></div>
+                <div class="q"><p>16. 陌生铃声，它会？</p><label><input type="radio" name="S8" value="1">无反应</label><label><input type="radio" name="S8" value="2">看一眼</label><label><input type="radio" name="S8" value="3">竖耳朵听</label><label><input type="radio" name="S8" value="4">走到旁边</label><label><input type="radio" name="S8" value="5">扒手机</label></div>
+                <div class="q"><p>17. 不同容器喂饭，它会？</p><label><input type="radio" name="S9" value="1">只吃碗里</label><label><input type="radio" name="S9" value="2">吃碗/盘</label><label><input type="radio" name="S9" value="3">都吃一点</label><label><input type="radio" name="S9" value="4">少吃纸杯</label><label><input type="radio" name="S9" value="5">都接受</label></div>
+                <div class="q"><p>18. 沙发挪10cm，它会？</p><label><input type="radio" name="S10" value="1">立刻发现</label><label><input type="radio" name="S10" value="2">很快发现</label><label><input type="radio" name="S10" value="3">过会儿发现</label><label><input type="radio" name="S10" value="4">半天发现</label><label><input type="radio" name="S10" value="5">没发现</label></div>
             </div>
 
-            <!-- T/F 10题 -->
             <div class="part">
                 <h2>三、决策方式（理性T / 感性F）</h2>
-                <div class="q"><p>19. 犯错被批评，它会？</p><label><input type="radio" name="T1" value="1">1分 无所谓</label><label><input type="radio" name="T1" value="2">2分 短暂躲开</label><label><input type="radio" name="T1" value="3">3分 半小时求和</label><label><input type="radio" name="T1" value="4">4分 情绪低</label><label><input type="radio" name="T1" value="5">5分 委屈躲起</label></div>
-                <div class="q"><p>20. 你感冒，它会？</p><label><input type="radio" name="T2" value="1">1分 不管你</label><label><input type="radio" name="T2" value="2">2分 待旁边</label><label><input type="radio" name="T2" value="3">3分 偶尔看你</label><label><input type="radio" name="T2" value="4">4分 趴床边</label><label><input type="radio" name="T2" value="5">5分 蹭额头</label></div>
-                <div class="q"><p>21. 来新猫，它会？</p><label><input type="radio" name="T3" value="1">1分 主动攻击</label><label><input type="radio" name="T3" value="2">2分 警惕对峙</label><label><input type="radio" name="T3" value="3">3分 互相试探</label><label><input type="radio" name="T3" value="4">4分 害怕后退</label><label><input type="radio" name="T3" value="5">5分 躲起来</label></div>
-                <div class="q"><p>22. 不给零食，它会？</p><label><input type="radio" name="T4" value="1">1分 放弃</label><label><input type="radio" name="T4" value="2">2分 叫5分钟</label><label><input type="radio" name="T4" value="3">3分 纠缠10分钟</label><label><input type="radio" name="T4" value="4">4分 纠缠15分钟</label><label><input type="radio" name="T4" value="5">5分 一直缠</label></div>
-                <div class="q"><p>23. 爪子被夹，它会？</p><label><input type="radio" name="T5" value="1">1分 自己处理</label><label><input type="radio" name="T5" value="2">2分 短暂哀嚎</label><label><input type="radio" name="T5" value="3">3分 求关注</label><label><input type="radio" name="T5" value="4">4分 小声叫</label><label><input type="radio" name="T5" value="5">5分 求安慰</label></div>
-                <div class="q"><p>24. 家人小声吵架，它会？</p><label><input type="radio" name="T6" value="1">1分 不受影响</label><label><input type="radio" name="T6" value="2">2分 无反应</label><label><input type="radio" name="T6" value="3">3分 踱步</label><label><input type="radio" name="T6" value="4">4分 躲起来</label><label><input type="radio" name="T6" value="5">5分 调停</label></div>
-                <div class="q"><p>25. 想进卧室关门，它会？</p><label><input type="radio" name="T7" value="1">1分 扒5分钟走</label><label><input type="radio" name="T7" value="2">2分 扒10分钟</label><label><input type="radio" name="T7" value="3">3分 扒+叫5分钟</label><label><input type="radio" name="T7" value="4">4分 一直叫</label><label><input type="radio" name="T7" value="5">5分 一直叫到开门</label></div>
-                <div class="q"><p>26. 剪指甲，它会？</p><label><input type="radio" name="T8" value="1">1分 不记仇</label><label><input type="radio" name="T8" value="2">2分 剪完就好</label><label><input type="radio" name="T8" value="3">3分 挣扎后配合</label><label><input type="radio" name="T8" value="4">4分 委屈不挣扎</label><label><input type="radio" name="T8" value="5">5分 半天不理你</label></div>
-                <div class="q"><p>27. 零食够不到，它会？</p><label><input type="radio" name="T9" value="1">1分 放弃</label><label><input type="radio" name="T9" value="2">2分 跳10次</label><label><input type="radio" name="T9" value="3">3分 围着转</label><label><input type="radio" name="T9" value="4">4分 叫你帮忙</label><label><input type="radio" name="T9" value="5">5分 一直叫</label></div>
-                <div class="q"><p>28. 你抱别的猫，它会？</p><label><input type="radio" name="T10" value="1">1分 冷漠走开</label><label><input type="radio" name="T10" value="2">2分 待旁边</label><label><input type="radio" name="T10" value="3">3分 看着</label><label><input type="radio" name="T10" value="4">4分 小声叫</label><label><input type="radio" name="T10" value="5">5分 挤走求抱</label></div>
+                <div class="q"><p>19. 犯错被批评，它会？</p><label><input type="radio" name="T1" value="1">无所谓</label><label><input type="radio" name="T1" value="2">短暂躲开</label><label><input type="radio" name="T1" value="3">半小时求和</label><label><input type="radio" name="T1" value="4">情绪低落</label><label><input type="radio" name="T1" value="5">委屈躲起</label></div>
+                <div class="q"><p>20. 你感冒，它会？</p><label><input type="radio" name="T2" value="1">不管你</label><label><input type="radio" name="T2" value="2">待旁边</label><label><input type="radio" name="T2" value="3">偶尔看你</label><label><input type="radio" name="T2" value="4">趴床边</label><label><input type="radio" name="T2" value="5">蹭额头</label></div>
+                <div class="q"><p>21. 来新猫，它会？</p><label><input type="radio" name="T3" value="1">主动攻击</label><label><input type="radio" name="T3" value="2">警惕对峙</label><label><input type="radio" name="T3" value="3">互相试探</label><label><input type="radio" name="T3" value="4">害怕后退</label><label><input type="radio" name="T3" value="5">躲起来</label></div>
+                <div class="q"><p>22. 不给零食，它会？</p><label><input type="radio" name="T4" value="1">放弃</label><label><input type="radio" name="T4" value="2">叫5分钟</label><label><input type="radio" name="T4" value="3">纠缠10分钟</label><label><input type="radio" name="T4" value="4">纠缠15分钟</label><label><input type="radio" name="T4" value="5">一直缠</label></div>
+                <div class="q"><p>23. 爪子被夹，它会？</p><label><input type="radio" name="T5" value="1">自己处理</label><label><input type="radio" name="T5" value="2">短暂哀嚎</label><label><input type="radio" name="T5" value="3">求关注</label><label><input type="radio" name="T5" value="4">小声叫</label><label><input type="radio" name="T5" value="5">求安慰</label></div>
+                <div class="q"><p>24. 家人小声吵架，它会？</p><label><input type="radio" name="T6" value="1">不受影响</label><label><input type="radio" name="T6" value="2">无反应</label><label><input type="radio" name="T6" value="3">踱步</label><label><input type="radio" name="T6" value="4">躲起来</label><label><input type="radio" name="T6" value="5">试图调停</label></div>
+                <div class="q"><p>25. 想进卧室关门，它会？</p><label><input type="radio" name="T7" value="1">扒5分钟走</label><label><input type="radio" name="T7" value="2">扒10分钟</label><label><input type="radio" name="T7" value="3">扒+叫5分钟</label><label><input type="radio" name="T7" value="4">一直叫</label><label><input type="radio" name="T7" value="5">一直叫到开门</label></div>
+                <div class="q"><p>26. 剪指甲，它会？</p><label><input type="radio" name="T8" value="1">不记仇</label><label><input type="radio" name="T8" value="2">剪完就好</label><label><input type="radio" name="T8" value="3">挣扎后配合</label><label><input type="radio" name="T8" value="4">委屈不挣扎</label><label><input type="radio" name="T8" value="5">半天不理你</label></div>
+                <div class="q"><p>27. 零食够不到，它会？</p><label><input type="radio" name="T9" value="1">放弃</label><label><input type="radio" name="T9" value="2">跳10次</label><label><input type="radio" name="T9" value="3">围着转</label><label><input type="radio" name="T9" value="4">叫你帮忙</label><label><input type="radio" name="T9" value="5">一直叫</label></div>
+                <div class="q"><p>28. 你抱别的猫，它会？</p><label><input type="radio" name="T10" value="1">冷漠走开</label><label><input type="radio" name="T10" value="2">待旁边</label><label><input type="radio" name="T10" value="3">看着</label><label><input type="radio" name="T10" value="4">小声叫</label><label><input type="radio" name="T10" value="5">挤走求抱</label></div>
             </div>
 
-            <!-- J/P 8题 -->
             <div class="part">
                 <h2>四、生活态度（判断J / 感知P）</h2>
-                <div class="q"><p>29. 吃饭时间规律吗？</p><label><input type="radio" name="J1" value="1">1分 固定到点叫</label><label><input type="radio" name="J1" value="2">2分 基本固定</label><label><input type="radio" name="J1" value="3">3分 大概固定</label><label><input type="radio" name="J1" value="4">4分 误差1小时</label><label><input type="radio" name="J1" value="5">5分 饿了就吃</label></div>
-                <div class="q"><p>30. 猫砂盆脏一点，它会？</p><label><input type="radio" name="J2" value="1">1分 拒绝用</label><label><input type="radio" name="J2" value="2">2分 犹豫用</label><label><input type="radio" name="J2" value="3">3分 偶尔拒绝</label><label><input type="radio" name="J2" value="4">4分 正常用</label><label><input type="radio" name="J2" value="5">5分 不在意</label></div>
-                <div class="q"><p>31. 睡觉地方？</p><label><input type="radio" name="J3" value="1">1分 只睡猫窝</label><label><input type="radio" name="J3" value="2">2分 偏爱猫窝</label><label><input type="radio" name="J3" value="3">3分 都睡</label><label><input type="radio" name="J3" value="4">4分 偶尔睡窝</label><label><input type="radio" name="J3" value="5">5分 随便躺</label></div>
-                <div class="q"><p>32. 玩具会归位吗？</p><label><input type="radio" name="J4" value="1">1分 叼回角落</label><label><input type="radio" name="J4" value="2">2分 大部分归位</label><label><input type="radio" name="J4" value="3">3分 偶尔整理</label><label><input type="radio" name="J4" value="4">4分 基本乱丢</label><label><input type="radio" name="J4" value="5">5分 完全乱丢</label></div>
-                <div class="q"><p>33. 去医院新环境，它会？</p><label><input type="radio" name="J5" value="1">1分 应激一直叫</label><label><input type="radio" name="J5" value="2">2分 紧张叫</label><label><input type="radio" name="J5" value="3">3分 短暂紧张</label><label><input type="radio" name="J5" value="4">4分 好奇观察</label><label><input type="radio" name="J5" value="5">5分 很快适应</label></div>
-                <div class="q"><p>34. 梳毛频率？</p><label><input type="radio" name="J6" value="1">1分 固定2次</label><label><input type="radio" name="J6" value="2">2分 固定1次</label><label><input type="radio" name="J6" value="3">3分 每天1次</label><label><input type="radio" name="J6" value="4">4分 每天至少1次</label><label><input type="radio" name="J6" value="5">5分 无规律</label></div>
-                <div class="q"><p>35. 新家具，它会？</p><label><input type="radio" name="J7" value="1">1分 很久才靠近</label><label><input type="radio" name="J7" value="2">2分 半天靠近</label><label><input type="radio" name="J7" value="3">3分 1小时靠近</label><label><input type="radio" name="J7" value="4">4分 半小时靠近</label><label><input type="radio" name="J7" value="5">5分 立刻探索</label></div>
-                <div class="q"><p>36. 作息和你同步吗？</p><label><input type="radio" name="J8" value="1">1分 完全同步</label><label><input type="radio" name="J8" value="2">2分 基本同步</label><label><input type="radio" name="J8" value="3">3分 大部分同步</label><label><input type="radio" name="J8" value="4">4分 偶尔同步</label><label><input type="radio" name="J8" value="5">5分 完全不同步</label></div>
+                <div class="q"><p>29. 吃饭时间规律吗？</p><label><input type="radio" name="J1" value="1">固定到点叫</label><label><input type="radio" name="J1" value="2">基本固定</label><label><input type="radio" name="J1" value="3">大概固定</label><label><input type="radio" name="J1" value="4">误差1小时</label><label><input type="radio" name="J1" value="5">饿了就吃</label></div>
+                <div class="q"><p>30. 猫砂盆脏一点，它会？</p><label><input type="radio" name="J2" value="1">拒绝用</label><label><input type="radio" name="J2" value="2">犹豫用</label><label><input type="radio" name="J2" value="3">偶尔拒绝</label><label><input type="radio" name="J2" value="4">正常用</label><label><input type="radio" name="J2" value="5">不在意</label></div>
+                <div class="q"><p>31. 睡觉地方？</p><label><input type="radio" name="J3" value="1">只睡猫窝</label><label><input type="radio" name="J3" value="2">偏爱猫窝</label><label><input type="radio" name="J3" value="3">都睡</label><label><input type="radio" name="J3" value="4">偶尔睡窝</label><label><input type="radio" name="J3" value="5">随便躺</label></div>
+                <div class="q"><p>32. 玩具会归位吗？</p><label><input type="radio" name="J4" value="1">叼回角落</label><label><input type="radio" name="J4" value="2">大部分归位</label><label><input type="radio" name="J4" value="3">偶尔整理</label><label><input type="radio" name="J4" value="4">基本乱丢</label><label><input type="radio" name="J4" value="5">完全乱丢</label></div>
+                <div class="q"><p>33. 去医院新环境，它会？</p><label><input type="radio" name="J5" value="1">应激一直叫</label><label><input type="radio" name="J5" value="2">紧张叫</label><label><input type="radio" name="J5" value="3">短暂紧张</label><label><input type="radio" name="J5" value="4">好奇观察</label><label><input type="radio" name="J5" value="5">很快适应</label></div>
+                <div class="q"><p>34. 梳毛频率？</p><label><input type="radio" name="J6" value="1">固定2次</label><label><input type="radio" name="J6" value="2">固定1次</label><label><input type="radio" name="J6" value="3">每天1次</label><label><input type="radio" name="J6" value="4">每天至少1次</label><label><input type="radio" name="J6" value="5">无规律</label></div>
+                <div class="q"><p>35. 新家具，它会？</p><label><input type="radio" name="J7" value="1">很久才靠近</label><label><input type="radio" name="J7" value="2">半天靠近</label><label><input type="radio" name="J7" value="3">1小时靠近</label><label><input type="radio" name="J7" value="4">半小时靠近</label><label><input type="radio" name="J7" value="5">立刻探索</label></div>
+                <div class="q"><p>36. 作息和你同步吗？</p><label><input type="radio" name="J8" value="1">完全同步</label><label><input type="radio" name="J8" value="2">基本同步</label><label><input type="radio" name="J8" value="3">大部分同步</label><label><input type="radio" name="J8" value="4">偶尔同步</label><label><input type="radio" name="J8" value="5">完全不同步</label></div>
             </div>
-
             <button type="submit" class="submitBtn">生成我的猫格报告</button>
         </form>
     </div>
 
-    <!-- 结果区域 -->
     <div class="box hide" id="resultBox">
         <h1>🐱 你的猫格报告</h1>
         <div class="resultCard">
@@ -150,7 +143,6 @@
             <button class="resetBtn" onclick="resetTest()">重新测试</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
