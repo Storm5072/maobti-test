@@ -1,0 +1,143 @@
+<html lang="zh-CN">
+ 8">
+    测试  href="style.css">  样式文件，可选 -->
+</head>
+>
+    表单区域 -->
+    <div id="questionnaire" class="container">
+         MaoBTI猫格测试</h1>
+        ">
+            组：E/I维度（8题） -->
+            
+                一、能量来源（外向E/内向I）</h3>
+                 E1题 -->
+                
+                    . 家里来其他宠物（猫咪派对）时，它的反应是？</p>
+                    > name="E1" value="1" required> 1. 立刻躲起来，全程不露面>
+                    <label><input type="radio" name="E1" value="2"> 2. 躲在角落，偶尔偷看</label>
+                    <label>" name="E1" value="3"> 3. 保持距离，不主动靠近                    <label>="radio" name="E1" value="4"> 4. 好奇观望，偶尔试探
+                    <label> type="radio" name="E1" value="5"> 5. 主动凑过去贴贴互动</label>
+                >
+                上述结构，替换题干和选项，完成E2-E8题（共8题） -->
+                此处省略E2-E8题，完整代码可直接复制下方模板 -->
+            </div>
+
+             第二组：S/N维度（10题）、第三组：T/F维度（10题）、第四组：J/P维度（8题） -->
+            ，每组用class="section"包裹，题目name属性按维度命名（如S1-S10、T1-T10、J1-J8） -->
+
+            " id="submitBtn">提交测试，查看猫格！ </form>
+    </div>
+
+    结果页区域（初始隐藏） -->
+     id="resultPage" class="container hidden">
+         你的猫咪MaoBTI报告
+        result-card">
+            <h2 id="catType">小狗猫>
+            ="percentages">E80% + S75% + F72% + J70%</p>
+            
+            可视化柱状图 -->
+            
+                chart-item">
+                    <span>E/I
+                    progress-bar">eProgress" class="progress" style="width: 80%"></div></div>
+                     id="ePercent">80% </div>
+                <div class="chart-item">
+                    </span>
+                    <div class="progress-bar"><div id="sProgress" class="progress" style="width: 75%"></div>                    Percent">75%>
+                
+                chart-item">
+                    <span>T/F
+                    progress-bar">tProgress" class="progress" style="width: 72%"></div></div>
+                     id="tPercent">72% </div>
+                <div class="chart-item">
+                    /P ">" class="progress" style="width: 70%"></div>
+                    jPercent">70%</span>
+                >
+            
+
+            description">
+                3>猫格描述</h3>
+                <p id="catDesc">外向粘人（E≥70%）+ 念旧务实（S≥70%）+ 感性敏感（F≥70%）+ 强迫症（J≥70%）！像小狗一样粘人，定时叫你起床，换猫粮会抗议，玩具必须摆整齐～</p>
+            >
+
+            ="suggestion">
+                </h3>
+                ">固定作息+多陪伴+不换环境</p>
+            
+
+            restartBtn">重新测试</button>
+            <button id="shareBtn">分享报告         </div>
+
+    <script src="script.js"></script>
+
+
+
+#### 3. 样式美化（可选，复制到style.css）
+```css
+/* 基础样式，新手可直接复制 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Arial", "微软雅黑", sans-serif;
+}
+.section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+.question {
+    margin: 15px 0;
+    padding: 10px;
+    border-bottom: 1px dashed #eee;
+}
+label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.hidden {
+    display: none;
+}
+.result-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.chart {
+    margin: 30px 0;
+}
+.chart-item {
+    margin: 15px 0;
+}
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background-color: #4CAF50;
+}
+.description, .suggestion {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
